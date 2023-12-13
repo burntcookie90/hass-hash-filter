@@ -27,6 +27,7 @@ def init(*args):
 
 
 template.TemplateEnvironment = init
+template._NO_HASS_ENV.filters["md5"] = md5
 template._NO_HASS_ENV.globals["md5"] = md5
 
 
