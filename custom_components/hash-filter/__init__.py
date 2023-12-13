@@ -7,7 +7,7 @@ from homeassistant.helpers import template
 
 _LOGGER = logging.getLogger(__name__)
 
-DOMAIN = "hash-filters"
+DOMAIN = "hash-filter"
 
 _TemplateEnvironment = template.TemplateEnvironment
 
