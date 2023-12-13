@@ -21,6 +21,7 @@ def md5(string):
 def init(*args):
     """Initialize filters"""
     env = _TemplateEnvironment(*args)
+    env.filters["md5"] = md5
     env.globals["md5"] = md5
     return env
 
@@ -31,5 +32,6 @@ template._NO_HASS_ENV.globals["md5"] = md5
 
 async def async_setup(hass, hass_config):
     tpl = template.Template("", template._NO_HASS_ENV.hass)
+    tpl._env.filters = md5
     tpl._env.globals = md5
     return True
