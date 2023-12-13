@@ -15,7 +15,7 @@ _TemplateEnvironment = template.TemplateEnvironment
 ## -- MD5
 def md5(string):
     """Convert string to MD5 checksum"""
-    return hashlib.md5(string)
+    return hashlib.md5(string.encode('utf-8'))
 
 
 def init(*args):
